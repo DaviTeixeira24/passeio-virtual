@@ -1,47 +1,51 @@
-import { Container, Flex, Link, HStack, Button, Image } from "@chakra-ui/react";
+import { Container, Flex, Link, HStack, Image } from "@chakra-ui/react";
 import React from "react";
+import Button from "./Button";
 
 export const NavBar: React.FC = () => {
   return (
     <Container className="max-w-full ">
-      <Flex className="h-16 items-center justify-between px-4 ">
+      <Flex className="h-20  items-center justify-between ">
         <Link href="/" className="">
-          <Image src="./logo.png" alt="Logo" className="h-10 w-auto" />
+          <Image
+            src="/logo.png"
+            alt="Passeio On Logo"
+            objectFit="contain"
+            className="h-auto w-40"
+          />
         </Link>
 
         <HStack className="space-x-12 ">
           <Link
             href="/"
-            className="tracking-wide text-gray-300 text-lg font-bold hover:text-[#1E57DB]"
+            className="tracking-wide text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
           >
             Inicio
           </Link>
           <Link
             href="/about"
-            className="tracking-wide text-gray-300 text-lg font-bold hover:text-[#1E57DB]"
+            className="tracking-wide text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
           >
             Sobre
           </Link>
           <Link
             href="/gallery"
-            className="tracking-wide text-gray-300 text-lg font-bold hover:text-[#1E57DB]"
+            className="tracking-wide text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
           >
             Galeria
           </Link>
           <Link
-            href="/"
-            className="tracking-wide text-blur-  text-shadow-[#1E57DB] text-gray-300 text-lg font-bold hover:text-[#1E57DB] hover:text-shadow hover:text-shadow-[#1E57DB]"
+            href="/contact"
+            className="text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
           >
             Contato
           </Link>
 
-          <Link href="/passeio" className="">
-            <Button
-              as="a"
-              className="bg-blue-500 text-[#939AAD] px-4 py-2 rounded hover:bg-blue-600 rounded-md"
-            >
-              Acessar Passeio
-            </Button>
+          <Link
+            href="/passeio"
+            className="tracking-wide text-gray-200 text-md font-semibold"
+          >
+            <Button>Acessar Passeio</Button>
           </Link>
         </HStack>
       </Flex>
