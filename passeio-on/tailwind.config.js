@@ -3,6 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,vue,html}"],
   theme: {
     extend: {
+      spacing: {
+        128: "32rem",
+        144: "36rem",
+        150: "38rem",
+        160: "40rem",
+        180: "44rem",
+        200: "48rem",
+      },
+
       keyframes: {
         //Efeito de brilho em botões
         glow: {

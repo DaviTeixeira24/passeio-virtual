@@ -1,11 +1,11 @@
-import { Container, Flex, Link, HStack, Image } from "@chakra-ui/react";
+import { Flex, Link, HStack, Image, Bleed } from "@chakra-ui/react";
 import React from "react";
 import Button from "./Button";
 
 export const NavBar: React.FC = () => {
   return (
-    <Container className="max-w-full ">
-      <Flex className="h-20  items-center justify-between ">
+    <Bleed className="max-w-full ">
+      <Flex className="h-20 items-center justify-between ml-3 mr-4 ">
         <Link href="/" className="">
           <Image
             src="/logo.png"
@@ -49,6 +49,6 @@ export const NavBar: React.FC = () => {
           </Link>
         </HStack>
       </Flex>
-    </Container>
+    </Bleed>
   );
 };
