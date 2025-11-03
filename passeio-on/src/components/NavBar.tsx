@@ -18,25 +18,49 @@ export const NavBar: React.FC = () => {
         <HStack className="space-x-12 ">
           <Link
             href="/"
-            className="tracking-wide text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
+            className="tracking-wide 
+            text-gray-200 
+            text-lg 
+            font-semibold 
+            transition-all duration-300
+            hover:ease-in-out 
+            hover:text-[#1e57dc]"
           >
             Inicio
           </Link>
           <Link
             href="/about"
-            className="tracking-wide text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
+            className="tracking-wide 
+            text-gray-200 
+            text-lg 
+            font-semibold 
+            transition-all duration-300
+            hover:ease-in-out 
+            hover:text-[#1e57dc]"
           >
             Sobre
           </Link>
           <Link
             href="/gallery"
-            className="tracking-wide text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
+            className="tracking-wide 
+            text-gray-200 
+            text-lg 
+            font-semibold 
+            transition-all duration-300
+            hover:ease-in-out 
+            hover:text-[#1e57dc]"
           >
             Galeria
           </Link>
           <Link
             href="/contact"
-            className="text-gray-200 text-lg font-semibold hover:text-[#1e57dc]"
+            className="tracking-wide 
+            text-gray-200 
+            text-lg 
+            font-semibold 
+            transition-all duration-300
+            hover:ease-in-out 
+            hover:text-[#1e57dc]"
           >
             Contato
           </Link>

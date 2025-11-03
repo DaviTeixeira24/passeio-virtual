@@ -14,6 +14,9 @@ export default function Button({ children, ...props }: GlowingButtonProps) {
         bg-[#1e57dc]
         transition-all duration-300
         animate-glow
+        
+        hover:bg-[#275fe1] hover:scale-105 hover:ease-in-out  
+        hover:px-6 hover:py-3
       "
     >
       {children}
