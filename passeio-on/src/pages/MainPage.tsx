@@ -1,39 +1,47 @@
 import BigButton from "@/components/BigButton";
-
 import { Box, Container, Grid, GridItem, Link } from "@chakra-ui/react";
 import React from "react";
 
 export default function MainPage() {
   return (
-    <Container className="flex flex-col items-center p-0 mt-10 ">
+    <Container
+      maxW="100%"
+      className="flex items-center justify-center min-h-screen px-8"
+    >
       <Grid
-        templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(2, 1fr)"
-        gap={200}
+        templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+        gap={16}
+        alignItems="center"
+        justifyContent="center"
       >
-        <GridItem rowSpan={2}>
+        {/* Coluna da esquerda */}
+        <GridItem>
           <Box>
-            <h1 className="text-6xl font-bold tracking-wide text-[#1e57dc] mb-6">
+            <h1 className="text-6xl font-bold tracking-wide text-[#1e57dc] mb-6 leading-tight">
               PASSEIO
               <br /> VIRTUAL 3D
             </h1>
             <p className="text-lg text-gray-300 tracking-wide text-justify">
               Explore o Observatório Nacional
-              <br /> em uma experiência interatva e imersiva
+              <br /> em uma experiência interativa e imersiva.
             </p>
 
             <Link
               href="/passeio"
-              className="tracking-wide text-gray-200 text-xl font-semibold mt-10 "
+              className="tracking-wide text-gray-200 text-xl font-semibold mt-10 inline-block"
             >
-              <BigButton className="">Acessar Passeio</BigButton>
+              <BigButton>Acessar Passeio</BigButton>
             </Link>
           </Box>
         </GridItem>
 
-        <GridItem rowSpan={2}>
-          <Box>
-            <div className="size-96 bg-white"></div>
+        {/* Coluna da direita */}
+        <GridItem>
+          <Box className="flex justify-center items-center">
+            {/* //substituir por imagem */}
+            <div className="w-[450px] h-[450px] bg-[#0A1326] border border-[#1F2A48] rounded-3xl shadow-lg flex items-center justify-center">
+              <p className="text-gray-400">mapa</p>
+            </div>
           </Box>
         </GridItem>
       </Grid>
