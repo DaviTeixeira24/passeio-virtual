@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import MainPage from "./pages/MainPage.tsx";
 import Footer from "./components/Footer.tsx";
 import AnimatedBackground from "./components/AnimatedBackground.tsx";
+import Gallery from "./pages/Gallery.tsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/*" element={<MainPage />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />
       </Box>

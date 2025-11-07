@@ -7,12 +7,12 @@ export default function AnimatedBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {stars.map((_, index) => {
-        //
+        // Generate random star position
         const top = Math.random() * 100;
         const left = Math.random() * 100;
         const delay = Math.random() * 2;
         const duration = 2 + Math.random() * 3;
-        const size = 1.5 + Math.random() * 3;
+        const size = 1.5 + Math.random() * 6;
 
         return (
           <motion.img
