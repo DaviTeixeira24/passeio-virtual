@@ -7,7 +7,7 @@ export default function Gallery() {
   return (
     <>
       <Text className="text-4xl font-bold tracking-wide text-[#1e57dc] mb-6 leading-tight text-center mt-10">
-        Galeria do ON
+        GALERIA OBSERVATÓRIO NÁCIONAL
       </Text>
 
       <Text className="text-xl font-semibold tracking-wide text-gray-300 mb-6 leading-tight text-center ">

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 export default function AnimatedBackground() {
-  const stars = Array.from({ length: 600 });
+  const stars = Array.from({ length: 800 });
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -12,7 +12,7 @@ export default function AnimatedBackground() {
         const left = Math.random() * 100;
         const delay = Math.random() * 2;
         const duration = 2 + Math.random() * 3;
-        const size = 1.5 + Math.random() * 6;
+        const size = 1.5 + Math.random() * 3;
 
         return (
           <motion.img
