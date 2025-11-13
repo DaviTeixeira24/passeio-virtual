@@ -6,9 +6,9 @@ import React from "react";
 export default function Gallery() {
   return (
     <>
-      <Text className="text-4xl font-bold tracking-wide text-[#1e57dc] mb-6 leading-tight text-center mt-10">
+      <h1 className="text-4xl font-bold tracking-wide text-[#1e57dc] mb-6 mt-10 leading-tight text-center  ">
         GALERIA OBSERVATÓRIO NÁCIONAL
-      </Text>
+      </h1>
 
       <Text className="text-xl font-semibold tracking-wide text-gray-300 mb-6 leading-tight text-center ">
         Conheça a realidade de alguns dos principais pontos do passeio virtual

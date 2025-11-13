@@ -7,6 +7,7 @@ import MainPage from "./pages/MainPage.tsx";
 import Footer from "./components/Footer.tsx";
 import AnimatedBackground from "./components/AnimatedBackground.tsx";
 import Gallery from "./pages/Gallery.tsx";
+import About from "./pages/About.tsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/*" element={<MainPage />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </Box>
