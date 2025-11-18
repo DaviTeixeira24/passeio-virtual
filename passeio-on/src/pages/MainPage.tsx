@@ -1,50 +1,67 @@
 import BigButton from "@/components/BigButton";
-import { Box, Container, Grid, GridItem, Link } from "@chakra-ui/react";
+import { Box, Container, HStack, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
 export default function MainPage() {
   return (
-    <Container
-      maxW="100%"
-      className="flex items-center justify-center min-h-screen px-8"
-    >
-      <Grid
-        templateColumns={{ base: "1fr", md: "1fr 1fr" }}
-        gap={16}
-        alignItems="center"
-        justifyContent="center"
-      >
-        {/* Coluna da esquerda */}
-        <GridItem>
-          <Box>
-            <h1 className="text-6xl font-bold tracking-wide text-[#1e57dc] mb-6 leading-tight">
-              PASSEIO
-              <br /> VIRTUAL 3D
-            </h1>
-            <p className="text-lg text-gray-300 tracking-wide text-justify">
-              Explore o Observatório Nacional
-              <br /> em uma experiência interativa e imersiva.
-            </p>
+    <>
+      {/* efeito nebulosa */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,.18),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(34,211,238,.15),transparent_35%)]" />
 
-            <Link
-              href="/passeio"
-              className="tracking-wide text-gray-200 text-xl font-semibold mt-10 inline-block"
-            >
-              <BigButton>Acessar Passeio</BigButton>
+      {/* container principal */}
+      <Container className="relative mx-auto flex max-w-6xl gap-16 px-6 py-16">
+        {/* coluna */}
+        <Box className="flex-1 flex flex-col items-center justify-center text-center">
+          <Text className="text-2xl font-medium uppercase tracking-[0.25em] text-onblue-200/90 text-outline-blue mb-6">
+            Bem-Vindo
+          </Text>
+
+          <h1
+            className="text-6xl   
+                       uppercase
+                       font-extrabold
+                       tracking-widest
+                       text-transparent bg-clip-text
+                       bg-gradient-to-r from-onblue-300 via-onblue-500 to-cyan-300
+                       bg-[length:200%_100%] animate-shimmer text-glow-blue"
+          >
+            Observatório <br /> Nacional
+          </h1>
+
+          <h2 className="mt-10 max-w-2xl text-3xl font-bold tracking-widest leading-relaxed text-[#1e57dc]/95 text-outline-blue align-center mx-auto uppercase">
+            Passeio Virtual 3d
+          </h2>
+
+          <p className=" max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline-blue align-center mx-auto">
+            Explore o Observatório Nacional em uma experiência interativa e
+            imersiva. Caminhe pelo campus histórico, e conheça as cupulasde
+            observação por dentro
+          </p>
+
+          <HStack className="mt-5 flex justify-center space-x-10">
+            <Link href="/passeio">
+              <BigButton>Acessar passeio</BigButton>
             </Link>
-          </Box>
-        </GridItem>
 
-        {/* Coluna da direita */}
-        <GridItem>
-          <Box className="flex justify-center items-center">
-            {/* //substituir por imagem */}
-            <div className="w-[450px] h-[450px] bg-[#0A1326] border border-[#1F2A48] rounded-3xl shadow-lg flex items-center justify-center">
-              <p className="text-gray-400">mapa</p>
-            </div>
-          </Box>
-        </GridItem>
-      </Grid>
-    </Container>
+            <Link href="/about">
+              <button
+                className="
+                relative px-10 py-4 rounded-lg 
+                font-semibold 
+                text-onblue-200/90
+                border border-[#1e57dc]/20 bg-slate-900/40 p-4 backdrop-blur-sm
+                transition-all duration-300
+                hover:hover:scale-105 hover:ease-in-out
+                hover:px-10 hover:py-4
+                uppercase
+             "
+              >
+                Saiba mais
+              </button>
+            </Link>
+          </HStack>
+        </Box>
+      </Container>
+    </>
   );
 }

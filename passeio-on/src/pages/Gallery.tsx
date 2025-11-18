@@ -6,6 +6,7 @@ import React from "react";
 export default function Gallery() {
   return (
     <>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,.18),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(34,211,238,.15),transparent_35%)]" />
       <h1 className="text-4xl font-bold tracking-wide text-[#1e57dc] mb-6 mt-10 leading-tight text-center  ">
         GALERIA OBSERVATÓRIO NÁCIONAL
       </h1>
