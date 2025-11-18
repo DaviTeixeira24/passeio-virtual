@@ -10,12 +10,13 @@ export default function Button({ children, ...props }: GlowingButtonProps) {
     <button
       {...props}
       className="
-        relative px-4 py-2 rounded-lg font-semibold text-white
+        relative px-6 py-3 rounded-lg font-semibold text-onblue-200/90
         bg-[#1e57dc]
         transition-all duration-300
         animate-glow
         hover:bg-[#275fe1] hover:scale-105 hover:ease-in-out  
         hover:px-6 hover:py-3
+        uppercase 
       "
     >
       {children}

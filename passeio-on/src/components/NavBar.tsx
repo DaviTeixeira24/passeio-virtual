@@ -16,7 +16,7 @@ export const NavBar: React.FC = () => {
               src="/logo.png"
               alt="Passeio On Logo"
               objectFit="contain"
-              className="h-auto w-40"
+              className="h-auto w-20"
             />
           </Link>
 
@@ -83,7 +83,7 @@ export const NavBar: React.FC = () => {
 
             <Link
               href="/passeio"
-              className="tracking-wide text-gray-200 text-md font-semibold"
+              className="tracking-wide text-gray-200 text-sm font-semibold"
             >
               <Button>Acessar Passeio</Button>
             </Link>

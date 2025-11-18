@@ -12,7 +12,7 @@ export default function AnimatedBackground() {
         const left = Math.random() * 100;
         const delay = Math.random() * 2;
         const duration = 2 + Math.random() * 3;
-        const size = 1.5 + Math.random() * 3;
+        const size = 2 + Math.random() * 5;
 
         return (
           <motion.img
