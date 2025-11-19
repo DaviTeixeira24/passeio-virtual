@@ -13,7 +13,7 @@ export default function MainPage() {
         {/* coluna */}
         <Box className="flex-1 flex flex-col items-center justify-center text-center">
           <Text className="text-2xl font-medium uppercase tracking-[0.25em] text-onblue-200/90 text-outline-blue mb-6">
-            Bem-Vindo
+            Bem-Vindo <br /> ao
           </Text>
 
           <h1
@@ -28,17 +28,17 @@ export default function MainPage() {
             Observatório <br /> Nacional
           </h1>
 
-          <h2 className="mt-10 max-w-2xl text-3xl font-bold tracking-widest leading-relaxed text-[#1e57dc]/95 text-outline-blue align-center mx-auto uppercase">
+          <h2 className="mt-7 max-w-2xl text-3xl font-bold tracking-widest leading-relaxed text-[#1e57dc]/95 text-outline-blue align-center mx-auto uppercase">
             Passeio Virtual 3d
           </h2>
 
           <p className=" max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline-blue align-center mx-auto">
             Explore o Observatório Nacional em uma experiência interativa e
-            imersiva. Caminhe pelo campus histórico, e conheça as cupulasde
-            observação por dentro
+            imersiva. Caminhe pelo campus histórico,
+            <br /> e conheça as cupulasde observação por dentro
           </p>
 
-          <HStack className="mt-5 flex justify-center space-x-10">
+          <HStack className="mt-10 flex justify-center space-x-20">
             <Link href="/passeio">
               <BigButton>Acessar passeio</BigButton>
             </Link>
@@ -46,19 +46,52 @@ export default function MainPage() {
             <Link href="/about">
               <button
                 className="
-                relative px-10 py-4 rounded-lg 
+                relative px-12 py-4 rounded-lg 
                 font-semibold 
                 text-onblue-200/90
                 border border-[#1e57dc]/20 bg-slate-900/40 p-4 backdrop-blur-sm
                 transition-all duration-300
                 hover:hover:scale-105 hover:ease-in-out
-                hover:px-10 hover:py-4
+                hover:px-12 hover:py-4
                 uppercase
              "
               >
                 Saiba mais
               </button>
             </Link>
+          </HStack>
+
+          <HStack className="mt-10 space-x-10 ">
+            <Box className="max-w-2xl max-h-2xl rounded-lg border border-slate-800/70 bg-slate-900/40 p-4 backdrop-blur-sm">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300 text-glow-cyan">
+                Exploração
+              </h3>
+              <Text className="tracking-wide leading-relaxed text-slate-300/95 text-outline align-center mx-auto ">
+                Explore o Observatório Nacional em uma experiência virtual
+                imersiva, caminhando por seus corredores e conhecendo suas
+                instalações históricas.
+              </Text>
+            </Box>
+            <Box className="max-w-2xl max-h-2xl rounded-lg border border-slate-800/70 bg-slate-900/40 p-4 backdrop-blur-sm">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300 text-glow-cyan">
+                Ciencia
+              </h3>
+              <Text className="tracking-wide leading-relaxed text-slate-300/95 text-outline align-center mx-auto">
+                Aprenda sobre astronomia, geofísica e outras disciplinas
+                científicas por meio de conteúdos educativos integrados ao
+                passeio virtual.
+              </Text>
+            </Box>
+            <Box className="max-w-2xl max-h-2xl rounded-lg border border-slate-800/70 bg-slate-900/40 p-4 backdrop-blur-sm">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300 text-glow-cyan">
+                Educação
+              </h3>
+              <Text className="tracking-wide leading-relaxed text-slate-300/95 text-outline align-center mx-auto">
+                Ideal para estudantes, educadores e entusiastas da ciência,
+                oferecendo uma maneira envolvente de aprender sobre o universo e
+                o trabalho do Observatório Nacional.
+              </Text>
+            </Box>
           </HStack>
         </Box>
       </Container>

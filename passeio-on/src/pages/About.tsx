@@ -34,7 +34,7 @@ function About() {
             </Text>
           </div>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline align-center mx-auto">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline align-center mx-auto ">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
             accusantium nobis nemo enim, tenetur, labore quod vitae ducimus
             voluptatibus ab asperiores sed ratione culpa magnam quo minima

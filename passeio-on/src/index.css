@@ -6,12 +6,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-@property --border-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 @layer utilities {
   /* brilho azul */
   .text-glow-blue {
