@@ -1,4 +1,5 @@
 import BigButton from "@/components/BigButton";
+import Nebula from "@/components/Nebula";
 import { Box, Container, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
@@ -6,7 +7,7 @@ function About() {
   return (
     <>
       {/* efeito nebulosa */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,.18),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(34,211,238,.15),transparent_35%)]" />
+      <Nebula />
 
       {/* container principal */}
       <Container className="relative mx-auto flex max-w-6xl gap-16 px-6 py-16">
@@ -45,7 +46,7 @@ function About() {
           {/* missão, visão e valores */}
           <HStack className="mt-6 grid gap-4 text-sm text-slate-300/90 md:grid-cols-3">
             <Box className="rounded-lg border border-slate-800/70 bg-slate-900/40 p-4 backdrop-blur-sm">
-              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-onblue-200">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300 text-glow-cyan">
                 Missão
               </h3>
               <Text className="tracking-wide">
@@ -56,7 +57,7 @@ function About() {
               </Text>
             </Box>
             <Box className="rounded-lg border border-slate-800/70 bg-slate-900/40 p-4 backdrop-blur-sm">
-              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300 text-glow-cyan">
                 Visão
               </h3>
               <Text className="tracking-wide">
@@ -68,7 +69,7 @@ function About() {
               </Text>
             </Box>
             <Box className="rounded-lg border border-slate-800/70 bg-slate-900/40 p-4 backdrop-blur-sm">
-              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-onblue-200">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-cyan-300 text-glow-cyan">
                 Valores
               </h3>
               <Text className="tracking-wide">
