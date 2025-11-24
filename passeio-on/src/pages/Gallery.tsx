@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import Nebula from "@/components/Nebula";
 import { Container, Text, VStack } from "@chakra-ui/react";
 
 import React from "react";
@@ -6,15 +7,30 @@ import React from "react";
 export default function Gallery() {
   return (
     <>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,.18),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(34,211,238,.15),transparent_35%)]" />
-      <h1 className="text-4xl font-bold tracking-wide text-[#1e57dc] mb-6 mt-10 leading-tight text-center  ">
-        GALERIA OBSERVATÓRIO NÁCIONAL
-      </h1>
+      <Nebula />
+      <div className="relative mx-auto flex max-w-6xl flex-col px-6 pt-16 text-center">
+        <Text className="text-2xl font-medium uppercase tracking-[0.25em] text-onblue-200/90 text-outline-blue mb-6">
+          Conheça <br /> a
+        </Text>
+        <h1
+          className=" text-6xl   
+                       uppercase
+                       font-extrabold
+                       tracking-widest
+                       text-transparent bg-clip-text
+                       bg-gradient-to-r from-onblue-300 via-onblue-500 to-cyan-300
+                       bg-[length:200%_100%] animate-shimmer text-glow-blue"
+        >
+          GALERIA <br />
+          DO <br />
+          OBSERVATÓRIO
+        </h1>
 
-      <Text className="text-xl font-semibold tracking-wide text-gray-300 mb-6 leading-tight text-center ">
-        Conheça a realidade de alguns dos principais pontos do passeio virtual
-      </Text>
-
+        <Text className="max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline-blue align-center mx-auto mt-4">
+          Veja a realidade de alguns dos principais pontos do passeio virtual,
+          estruturas, ambientes, instrumentos e muito mais.
+        </Text>
+      </div>
       <Container
         className="
         min-h-screen
