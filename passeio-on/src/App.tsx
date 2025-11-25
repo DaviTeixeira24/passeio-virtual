@@ -9,6 +9,7 @@ import AnimatedBackground from "./components/AnimatedBackground.tsx";
 import Gallery from "./pages/Gallery.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
+import Game from "./pages/Game.tsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/passeio" element={<Game />} />
         </Routes>
         <Footer />
       </Box>
