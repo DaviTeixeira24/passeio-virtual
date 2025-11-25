@@ -1,12 +1,12 @@
 import BigButton from "@/components/BigButton";
+import Nebula from "@/components/Nebula";
 import { Box, Container, HStack, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
 export default function MainPage() {
   return (
     <>
-      {/* efeito nebulosa */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,.18),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(34,211,238,.15),transparent_35%)]" />
+      <Nebula />
 
       {/* container principal */}
       <Container className="relative mx-auto flex max-w-6xl gap-16 px-6 py-16">
