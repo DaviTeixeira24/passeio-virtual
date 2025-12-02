@@ -19,7 +19,7 @@ function Game() {
           Passeio Virtual
         </h1>
 
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline-blue align-center mx-auto">
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-300/95  text-outline-blue align-center mx-auto">
           Inicie sua jornada pelo Observatório Nacional. Explore as instalações,
           conheça os instrumentos e descubra a história por trás de cada
           observação.

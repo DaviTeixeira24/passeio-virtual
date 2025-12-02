@@ -15,16 +15,17 @@ const Contact = () => {
   return (
     <>
       <Nebula />
+
       <Box
         maxW="6xl"
         mx="auto"
-        px={6}
-        py={{ base: 16, md: 24 }}
+        px={{ base: 4, sm: 6 }}
+        py={{ base: 12, md: 24 }}
         position="relative"
       >
-        {/* Título geral da página (opcional se você tiver navbar fixa) */}
+        {/* titulo */}
         <Text
-          fontSize="sm"
+          fontSize="xs sm:sm"
           textTransform="uppercase"
           letterSpacing="0.25em"
           textAlign="center"
@@ -36,13 +37,13 @@ const Contact = () => {
         <Heading
           mt={3}
           textAlign="center"
-          className="text-6xl   
-                       uppercase
-                       font-extrabold
-                       tracking-widest
-                       text-transparent bg-clip-text
-                       bg-gradient-to-r from-onblue-300 via-onblue-500 to-cyan-300
-                       bg-[length:200%_100%] animate-shimmer text-glow-blue"
+          className="
+            text-4xl sm:text-5xl md:text-6xl   
+            uppercase font-extrabold tracking-widest
+            text-transparent bg-clip-text
+            bg-gradient-to-r from-onblue-300 via-onblue-500 to-cyan-300
+            bg-[length:200%_100%] animate-shimmer text-glow-blue
+          "
         >
           Contato
         </Heading>
@@ -50,36 +51,61 @@ const Contact = () => {
         <Text
           mt={3}
           textAlign="center"
-          className="max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline-blue align-center mx-auto"
+          className="
+            max-w-2xl text-base sm:text-lg 
+            leading-relaxed text-slate-300/95 text-outline-blue 
+            mx-auto
+          "
         >
           Para dúvidas, sugestões, parcerias ou informações sobre o passeio
           virtual, entre em contato conosco pelo formulário ao lado.
         </Text>
 
-        {/* CONTAINER 2 COLUNAS */}
+        {/* layout */}
         <Flex
           mt={12}
           direction={{ base: "column", lg: "row" }}
-          gap={{ base: 10, lg: 16 }}
+          gap={{ base: 14, lg: 16 }}
         >
-          {/* LADO ESQUERDO – INFORMAÇÕES DE CONTATO */}
+          {/* coluna esquerda */}
           <Box flex="1">
-            <VStack align="flex-start" className="space-y-6">
-              <Heading className="mt-7 max-w-2xl text-3xl font-bold tracking-widest leading-relaxed text-[#1e57dc]/95 text-outline-blue align-center mx-auto uppercase">
+            <VStack
+              align={{ base: "center", lg: "flex-start" }}
+              className="space-y-6 text-center lg:text-left"
+            >
+              <Heading
+                className="
+                  mt-2 
+                  text-2xl sm:text-3xl 
+                  font-bold tracking-widest leading-relaxed 
+                  text-[#1e57dc]/95 text-outline-blue uppercase
+                "
+              >
                 Contate-nos
               </Heading>
 
-              <Text className="max-w-2xl text-lg leading-relaxed text-slate-300/95 text-outline-blue align-center mx-auto text-center">
+              <Text
+                className="
+                  max-w-xl 
+                  text-base sm:text-lg 
+                  leading-relaxed text-slate-300/95 text-outline-blue
+                "
+              >
                 Para dúvidas, sugestões ou parcerias, entre em contato conosco.
                 Estamos à disposição para ajudar e fornecer informações sobre o
                 Observatório Nacional e o passeio virtual 3D.
               </Text>
 
-              {/* telefone */}
+              {/* card telefone */}
               <Box className="w-full max-w-md">
                 <button
                   type="button"
-                  className="group flex w-full items-center justify-between rounded-2xl border border-slate-700/70 bg-slate-900/60 px-5 py-3 text-sm text-slate-200"
+                  className="
+                    group flex w-full items-center justify-between 
+                    rounded-2xl border border-slate-700/70 
+                    bg-slate-900/60 px-5 py-3 
+                    text-sm text-slate-200
+                  "
                 >
                   <span className="font-medium tracking-wide">
                     +55 (21) 0000-0000
@@ -90,11 +116,16 @@ const Contact = () => {
                 </button>
               </Box>
 
-              {/* e-mail */}
+              {/* card email */}
               <Box className="w-full max-w-md">
                 <button
                   type="button"
-                  className="group flex w-full items-center justify-between rounded-2xl border border-slate-700/70 bg-slate-900/60 px-5 py-3 text-sm text-slate-200"
+                  className="
+                    group flex w-full items-center justify-between 
+                    rounded-2xl border border-slate-700/70 
+                    bg-slate-900/60 px-5 py-3 
+                    text-sm text-slate-200
+                  "
                 >
                   <span className="font-medium tracking-wide">ditin@on.br</span>
                   <span className="text-xs text-cyan-300 group-hover:text-cyan-50">
@@ -103,96 +134,103 @@ const Contact = () => {
                 </button>
               </Box>
 
-              <Text fontSize="xs" color="whiteAlpha.600">
+              <Text
+                fontSize="xs"
+                className="text-white/50 text-center lg:text-left"
+              >
                 Horário de atendimento: segunda a sexta, das 9h às 17h (horário
                 de Brasília).
               </Text>
             </VStack>
           </Box>
 
-          {/* LINHA DIVISÓRIA (só desktop) */}
-          <Box display={{ base: "none", lg: "block" }} w="1px" />
+          {/* coluna direita */}
+          <Box flex="1" w="100%">
+            <Box className="rounded-3xl bg-slate-900/40 border border-slate-800/70 backdrop-blur-sm px-4 py-6 sm:px-8 sm:py-10">
+              <Heading
+                as="h3"
+                textAlign="center"
+                className="
+                  text-xl sm:text-2xl font-medium uppercase 
+                  tracking-[0.25em] text-onblue-200/90 text-outline mb-6
+                "
+              >
+                Envie sua mensagem
+              </Heading>
 
-          {/* LADO DIREITO – FORMULÁRIO */}
-          <Box flex="1">
-            <Box className="border-animated animate-border p-[1px] rounded-3xl">
-              <Box className="rounded-3xl bg-slate-900/40 border border-slate-800/70 backdrop-blur-sm px-6 py-8 md:px-8 md:py-10">
-                <Heading
-                  as="h3"
-                  fontSize={{ base: "lg", md: "xl" }}
-                  textAlign="center"
-                  className="text-2xl font-medium uppercase tracking-[0.25em] text-onblue-200/90 text-outline mb-6 "
-                >
-                  Envie sua mensagem
-                </Heading>
-
-                <Box
-                  as="form"
-                  mt={6}
-                  display="flex"
-                  flexDirection="column"
-                  gap={4}
-                >
-                  {/* Nome */}
-                  <Box textAlign="left">
-                    <Text fontSize="xs" mb={1} className="text-slate-300/90">
-                      Nome completo
-                    </Text>
-                    <Input
-                      placeholder="Digite seu nome"
-                      className="
-                        w-full rounded-xl border border-slate-700/70
-                        bg-slate-900/60 px-4 py-3 text-sm
-                        placeholder:text-slate-500
-                        focus:outline-none focus:ring-2 focus:ring-onblue-400 focus:border-onblue-400
-                        hover:border-slate-400
-                        transition
-                      "
-                    />
-                  </Box>
-
-                  {/* Email */}
-                  <Box textAlign="left">
-                    <Text fontSize="xs" mb={1} className="text-slate-300/90">
-                      Seu e-mail
-                    </Text>
-                    <Input
-                      type="email"
-                      placeholder="nome@exemplo.com"
-                      className="
-                        w-full rounded-xl border border-slate-700/70
-                        bg-slate-900/60 px-4 py-3 text-sm
-                        placeholder:text-slate-500
-                        focus:outline-none focus:ring-2 focus:ring-onblue-400 focus:border-onblue-400
-                        hover:border-slate-400
-                        transition
-                      "
-                    />
-                  </Box>
-
-                  {/* Mensagem */}
-                  <Box textAlign="left">
-                    <Text fontSize="xs" mb={1} className="text-slate-300/90">
-                      Sua mensagem
-                    </Text>
-                    <Textarea
-                      rows={4}
-                      placeholder="Como podemos ajudar?"
-                      className="
-                        w-full rounded-xl border border-slate-700/70
-                        bg-slate-900/60 px-4 py-3 text-sm
-                        placeholder:text-slate-500
-                        focus:outline-none focus:ring-2 focus:ring-onblue-400 focus:border-onblue-400
-                        hover:border-slate-400
-                        transition resize-none
-                      "
-                    />
-                  </Box>
-
-                  <HStack justify="center" mt={4}>
-                    <Button>Enviar mensagem</Button>
-                  </HStack>
+              {/* form */}
+              <Box
+                as="form"
+                mt={6}
+                display="flex"
+                flexDirection="column"
+                gap={4}
+              >
+                {/* nome */}
+                <Box>
+                  <Text fontSize="xs" mb={1} className="text-slate-300/90">
+                    Nome completo
+                  </Text>
+                  <Input
+                    placeholder="Digite seu nome"
+                    className="
+                      text-slate-200
+                      w-full rounded-xl border border-slate-700/70
+                      bg-slate-900/60 px-4 py-3 text-sm
+                      placeholder:text-slate-500
+                      focus:outline-none focus:ring-2 focus:ring-onblue-400 
+                      focus:border-onblue-400
+                      hover:border-slate-400
+                      transition
+                    "
+                  />
                 </Box>
+
+                {/* email */}
+                <Box>
+                  <Text fontSize="xs" mb={1} className="text-slate-300/90">
+                    Seu e-mail
+                  </Text>
+                  <Input
+                    type="email"
+                    placeholder="nome@exemplo.com"
+                    className="
+                      text-slate-200
+                      w-full rounded-xl border border-slate-700/70
+                      bg-slate-900/60 px-4 py-3 text-sm
+                      placeholder:text-slate-500
+                      focus:outline-none focus:ring-2 focus:ring-onblue-400 
+                      focus:border-onblue-400
+                      hover:border-slate-400
+                      transition
+                    "
+                  />
+                </Box>
+
+                {/* mensagem */}
+                <Box>
+                  <Text fontSize="xs" mb={1} className="text-slate-300/90">
+                    Sua mensagem
+                  </Text>
+                  <Textarea
+                    rows={4}
+                    placeholder="Como podemos ajudar?"
+                    className="
+                      text-slate-200
+                      w-full rounded-xl border border-slate-700/70
+                      bg-slate-900/60 px-4 py-3 text-sm
+                      placeholder:text-slate-500
+                      focus:outline-none focus:ring-2 focus:ring-onblue-400 
+                      focus:border-onblue-400
+                      hover:border-slate-400
+                      transition resize-none
+                    "
+                  />
+                </Box>
+
+                <HStack justify="center" mt={4}>
+                  <Button>Enviar mensagem</Button>
+                </HStack>
               </Box>
             </Box>
           </Box>
