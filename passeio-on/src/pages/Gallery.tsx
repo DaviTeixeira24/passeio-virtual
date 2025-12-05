@@ -8,13 +8,11 @@ export default function Gallery() {
     <>
       <Nebula />
 
+      {/* HEADER */}
       <div
         className="
-          relative mx-auto 
-          flex flex-col 
-          max-w-6xl 
-          px-4 sm:px-6 
-          pt-14 sm:pt-16 
+          relative mx-auto flex max-w-6xl flex-col 
+          px-4 sm:px-6 pt-14 sm:pt-16 
           text-center
         "
       >
@@ -31,17 +29,14 @@ export default function Gallery() {
 
         <h1
           className="
-            text-4xl sm:text-6xl   
-            uppercase font-extrabold tracking-widest
+            text-4xl sm:text-6xl
+            uppercase font-extrabold tracking-widest 
             text-transparent bg-clip-text
             bg-gradient-to-r from-onblue-300 via-onblue-500 to-cyan-300
             bg-[length:200%_100%] animate-shimmer text-glow-blue
-            leading-tight
           "
         >
-          GALERIA <br />
-          DO <br />
-          OBSERVATÓRIO
+          GALERIA <br /> DO <br /> OBSERVATÓRIO
         </h1>
 
         <Text
@@ -53,15 +48,16 @@ export default function Gallery() {
             mx-auto mt-4
           "
         >
-          Veja a realidade de alguns dos principais pontos do passeio virtual,
-          estruturas, ambientes, instrumentos e muito mais.
+          Veja a realidade dos principais pontos do passeio virtual, estruturas,
+          ambientes, instrumentos e muito mais.
         </Text>
       </div>
 
       <Container
         className="
           min-h-screen
-          max-w-full sm:max-w-4xl
+          max-w-4xl
+          flex items-center justify-center flex-col
           bg-[#060E1C]/10
           rounded-xl
           shadow-2xl
@@ -69,42 +65,25 @@ export default function Gallery() {
           border border-[#1e57dc]/20
           mt-10 mb-10
           px-4 sm:px-6 md:px-10
-          py-6 sm:py-10
         "
       >
         <VStack
-          className="
-            w-full
-            space-y-8 sm:space-y-10 
-            my-6 sm:my-10
-            items-center justify-center 
-          "
+          className="space-y-8 sm:space-y-10 my-8 sm:my-10"
+          align="center"
         >
-          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl">
-            <Card
-              title="Cúpula do Observatório Nacional"
-              imgSrc="/teste.jpg"
-              imgAlt="Passeio Virtual"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit dolores, quisquam saepe, accusamus natus doloremque placeat. Expedita, voluptate."
-            />
-          </div>
+          <Card
+            title="Centro de Processamento de Dados do Observatório Nacional - CPDON"
+            imgSrc="/cpdon.jpg"
+            imgAlt="Passeio Virtual"
+            description="Veja a realidade do Centro de Processamento de Dados do Observatório Nacional, onde são armazenados e analisados os dados coletados pelos instrumentos astronômicos."
+          />
 
-          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl">
-            <Card
-              title="Prédio do Observatório Nacional"
-              imgSrc="/predio.jpg"
-              imgAlt="Passeio Virtual"
-              description="Explore o Observatório Nacional em uma experiência interativa e imersiva."
-            />
-          </div>
-
-          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl">
-            <Card
-              title="Cúpula do Observatório Nacional"
-              imgSrc="/.jpg"
-              description="Explore o Observatório Nacional em uma experiência interativa e imersiva."
-            />
-          </div>
+          <Card
+            title="Cúpula 45"
+            imgSrc="/cupula.jpg"
+            imgAlt="Passeio Virtual"
+            description="Coheça a Cúpula 45, uma das principais instalações do Observatório Nacional, onde estão localizados telescópios e instrumentos de observação astronômica."
+          />
         </VStack>
       </Container>
     </>

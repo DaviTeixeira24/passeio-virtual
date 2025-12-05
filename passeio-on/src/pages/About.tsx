@@ -36,7 +36,7 @@ function About() {
                 bg-[length:200%_100%] animate-shimmer text-glow-blue
               "
             >
-              +175
+              +195
             </Text>
 
             <Text
